@@ -62,7 +62,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/inventario', function () {
+    Route::get('/inventario', 'App\Http\Controllers\RelacionFrutasyverduras@index', function () {
         return view('inventario');
     })->name('inventario');
 });

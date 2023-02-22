@@ -11,6 +11,6 @@ class RelacionFrutasyverduras extends Controller
     //
     public function index(){
         $inventarios = Inventario::all();
-        return view('inventario', compact('frutayverdura'));
+        return view('inventario', compact('inventarios'));
     }
 }
