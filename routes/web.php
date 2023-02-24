@@ -72,6 +72,16 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/alumno-materia', 'App\Http\Controllers\RelacionController2@index', function () {
+        return view('alumno-materia');
+    })->name('alumno-materia');
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
     Route::get('/carrito', function () {
         return view('carrito');
     })->name('carrito');

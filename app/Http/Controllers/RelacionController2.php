@@ -12,6 +12,6 @@ class RelacionController2 extends Controller
     public function index(){
         $alumno = Alumno::find(1);
         $materia = Materia::find(2);
-        return view('tabla', compact('alumno', 'materia'));
+        return view('alumno-materia', compact('alumno', 'materia'));
     }
 }
